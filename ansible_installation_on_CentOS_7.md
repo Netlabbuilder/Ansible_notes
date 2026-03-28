@@ -26,7 +26,7 @@ Python 3.6.8
 ```
 **3. Install the latest version of Ansible and get it running with Python3**
 ```
-[root@netlabbuilder ~]# **pip3 install ansible**  
+[root@netlabbuilder ~]# pip3 install ansible
 ```
 **4. Verify the ansible and its Python3 interpreter**
 ```
