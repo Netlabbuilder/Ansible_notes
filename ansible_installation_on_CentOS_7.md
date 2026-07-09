@@ -1,6 +1,6 @@
 The following steps are to install the latest version of Ansible (ansible 2.8.5, as of 26.09.2019), and get it up and running on CentOS 7 (CentOS Linux release 7.6.1810) with Python3 (Python 3.6.8):
 
-**1. Check CentOS 7 version:**
+**1. Check CentOS OS Release:**
 ```
 [root@netlabbuilder ~]# cat /etc/centos-release
 CentOS Linux release 7.6.1810 (Core)
