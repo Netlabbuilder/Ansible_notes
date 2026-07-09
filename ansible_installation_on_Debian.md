@@ -1,7 +1,7 @@
 The following steps are to install Ansible on Debian. The following code snippets are taken from Windows Subsystem for Linux (WSL):
 #### 1. Check Debian OS Release:
 ```
-cat /etc/os-release
+$ cat /etc/os-release
 PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
 NAME="Debian GNU/Linux"
 VERSION_ID="12"
