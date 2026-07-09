@@ -1,1 +1,0 @@
-The 'others' folder contains other relevant information and notes

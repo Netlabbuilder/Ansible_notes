@@ -1,6 +1,0 @@
-[automation]
-automation_01 ansible_host=192.168.179.130 ansible_network_os="ios" ansible_user=netlabbuilder
-automation_02 ansible_host=192.168.179.133 ansible_network_os="ios" ansible_user=netlabbuilder
-
-[automation:vars]
-ansible_python_interpreter=/usr/bin/python3.6
