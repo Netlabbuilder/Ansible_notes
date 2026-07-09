@@ -1,7 +1,0 @@
-# This is the content of /etc/hosts file on  Control Node
-
-127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
-::1 localhost localhost.localdomain localhost6 localhost6.localdomain6
-
-192.168.56.11 rockylinux941.netlabbuilder.net rockylinux941
-192.168.56.12 rockylinux942.netlabbuilder.net rockylinux942
