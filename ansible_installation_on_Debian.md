@@ -1,4 +1,5 @@
-#### These steps are performed on Debian GNU/Linux 12 (bookworm)
+The following steps are to install Ansible on Debian. The following code snippets are taken from Windows Subsystem for Linux (WSL):
+
 ```
 cat /etc/os-release
 PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
