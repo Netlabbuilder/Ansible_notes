@@ -16,4 +16,4 @@ Lab 1 covers the following configurations of Layer 3 Spine Leaf network:
 - **Network connectivity**
   - Control node must be able to reach managed nodes via SSH.
   - Network segmentation:
-    - Control node and managed nodes are either in the same Layer 2 network segment (without any routed devices in between) or in differrant network segments (with one or more routed devices in between).
+    - Control node and managed nodes are either in the same Layer 2 network segment (without any routed devices in between) or in differrent network segments (with one or more routed devices in between).
