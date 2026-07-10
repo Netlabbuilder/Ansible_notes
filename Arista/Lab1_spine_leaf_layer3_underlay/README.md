@@ -8,7 +8,7 @@ Lab 1 covers the following configurations of Layer 3 Spine Leaf network:
 ### Requirements
 - **Control node:** one control node where ansible is installed
 
-- **Managed nodes:** six managed nodes, also known as target nodes, where the configuration changes or modifications are applied:
+- **Managed nodes:** six managed nodes, also known as **target nodes**, where the configuration changes or modifications are applied:
   - Two spine nodes
   - Four leaf nodes
 
