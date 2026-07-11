@@ -1,11 +1,11 @@
-### Introduction
+## Introduction
 
 Lab 1 is the first lab of ***Network Automation with Ansible*** lab series on Arista Networks.
 
 Lab 1 covers the following configurations of Layer 3 Spine Leaf network:
  - `banner login` and `banner motd`
 
-### Requirements
+## Requirements
 - **Control node**
   - One control node where ansible is installed.
 
@@ -17,3 +17,5 @@ Lab 1 covers the following configurations of Layer 3 Spine Leaf network:
   - Control node must be able to reach managed nodes via SSH.
   - Network segmentation:
     - Control node and managed nodes are either in the same Layer 2 network segment (without any routed devices in between) or in differrent network segments (with one or more routed devices in between).
+
+## Project Structure
