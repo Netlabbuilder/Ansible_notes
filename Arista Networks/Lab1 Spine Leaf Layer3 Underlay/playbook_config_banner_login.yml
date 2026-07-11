@@ -6,7 +6,7 @@
     - name: Configure `banner login`      
       arista.eos.eos_banner:
         banner: login
-        text:
+        text: |
           WELCOME TO NETLABBUILDER.NET NETWORK INFRASTRUCTURE
           THIS SYSTEM IS RESTRICTED TO AUTHORIZED PERSONNEL ONLY
         state: present
