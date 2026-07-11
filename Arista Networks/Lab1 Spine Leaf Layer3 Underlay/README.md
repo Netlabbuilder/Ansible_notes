@@ -136,4 +136,12 @@ The below code snippet reveals the structure of this Lab 1. The command `tree -L
   WELCOME TO NETLABBUILDER.NET NETWORK INFRASTRUCTURE
   THIS SYSTEM IS RESTRICTED TO AUTHORIZED PERSONNEL ONLY
   (admin@leaf4) Password:
+
+  ansible-arista$ ssh admin@spine1
+  Warning: Permanently added 'spine1' (ED25519) to the list of known hosts.
+  WELCOME TO NETLABBUILDER.NET NETWORK INFRASTRUCTURE
+  THIS SYSTEM IS RESTRICTED TO AUTHORIZED PERSONNEL ONLY
+  (admin@spine1) Password:
+  
+  ansible-arista$
   ```
