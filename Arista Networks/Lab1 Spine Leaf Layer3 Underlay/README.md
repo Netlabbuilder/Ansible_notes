@@ -123,3 +123,17 @@ The below code snippet reveals the structure of this Lab 1. The command `tree -L
     
     ansible-arista$
     ```
+- Verify the banner login texts are now present on target nodes:
+  ```
+  ansible-arista$ ssh admin@leaf1
+  Warning: Permanently added 'leaf1' (ED25519) to the list of known hosts.
+  WELCOME TO NETLABBUILDER.NET NETWORK INFRASTRUCTURE
+  THIS SYSTEM IS RESTRICTED TO AUTHORIZED PERSONNEL ONLY
+  (admin@leaf1) Password:
+  
+  ansible-arista$ ssh admin@leaf4
+  Warning: Permanently added 'leaf4' (ED25519) to the list of known hosts.
+  WELCOME TO NETLABBUILDER.NET NETWORK INFRASTRUCTURE
+  THIS SYSTEM IS RESTRICTED TO AUTHORIZED PERSONNEL ONLY
+  (admin@leaf4) Password:
+  ```
