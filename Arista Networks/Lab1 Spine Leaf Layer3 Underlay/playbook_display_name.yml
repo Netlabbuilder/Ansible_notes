@@ -1,0 +1,8 @@
+---
+- name: First Playbook - First Run
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Display name values declared in YAML-format inventory file (`host_inventory.yml`) by using ansible default variable 'inventory_hostname'
+      ansible.builtin.debug:
+        msg: “Hostname is {{ inventory_hostname }}”
