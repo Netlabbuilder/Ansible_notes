@@ -1,5 +1,5 @@
 ---
-- name: First Playbook - First Run
+- name: Display configurations on Arista nodes
   hosts: all
   gather_facts: no
   tasks:
