@@ -1,0 +1,14 @@
+arista_ceos:
+  children:
+    spines:
+    leaves:
+spines:
+  hosts:
+    spine1:
+    spine2:
+leaves:
+  hosts:
+    leaf1:
+    leaf2:
+    leaf3:
+    leaf4:
