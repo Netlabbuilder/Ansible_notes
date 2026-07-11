@@ -2,8 +2,11 @@
 
 Lab 1 is the first lab of ***Network Automation with Ansible*** lab series on Arista Networks.
 
-Lab 1 covers the following configurations of Layer 3 Spine Leaf network:
- - `banner login` and `banner motd`
+Lab 1 covers the following tasks which are applied on Arista nodes of Spine Leaf Layer3 Underlay network:
+ - Checks:
+   - Display name values defined in YAML-format inventory file. These name values can be different than the actual hostnames configured on Arista nodes.
+ - Configurations:
+   - `banner login` and `banner motd`
 
 ## Requirements
 - **Control node**
@@ -19,3 +22,11 @@ Lab 1 covers the following configurations of Layer 3 Spine Leaf network:
     - Control node and managed nodes are either in the same Layer 2 network segment (without any routed devices in between) or in differrent network segments (with one or more routed devices in between).
 
 ## Project Structure
+```
+ansible-arista$ tree -L 1
+.
+├── ansible.cfg
+├── group_vars
+├── host_inventory.yml
+├── playbook_display_name.yml
+```
