@@ -31,3 +31,11 @@ The below code snippet reveals the structure of this Lab 1. The command `tree -L
  ├── host_inventory.yml
  ├── playbook_display_name.yml
  ```
+File `ansible.cfg`:
+```
+ansible-arista$ cat ansible.cfg
+[defaults]
+inventory=host_inventory.yml
+gathering = explicit
+host_key_checking = False
+```
