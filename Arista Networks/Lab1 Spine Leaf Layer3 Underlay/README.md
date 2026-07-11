@@ -21,7 +21,7 @@ Lab 1 covers the following configuration tasks which are applied on Arista nodes
     - Control node and managed nodes are either in the same Layer 2 network segment (without any routed devices in between) or in differrent network segments (with one or more routed devices in between).
 
 ## Project Structure
-The below code snippet reveals the structure of this Lab 1. The command `tree -L 2` show the current directory and its immediate sub-directories (Depth 2 or Level 2)  
+The below code snippets reveal the structure of this Lab 1. The command `tree -L 2` show the current directory and its immediate sub-directories (Depth 2 or Level 2)  
  ```
  ansible-arista$ tree -L 2
  .
@@ -34,7 +34,7 @@ The below code snippet reveals the structure of this Lab 1. The command `tree -L
  ```
 ## Playbooks
 **Playbook 1:** `playbook_display_name.yml`
-- Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`. The below code snippets shows the results after running the `playbook_display_name.yml` playbook:
+- Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`:
   ```
   ansible-arista$ ansible-playbook playbook_display_name.yml
   
@@ -74,7 +74,7 @@ The below code snippet reveals the structure of this Lab 1. The command `tree -L
 
 **Playbook 2:** `playbook_config_banner_login.yml`
 
-- Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`. The below code snippets shows the results after running the `playbook_config_banner_login.yml` playbook:
+- Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`:
 
     ```
     ansible-arista$ ansible-playbook playbook_config_banner_login.yml
