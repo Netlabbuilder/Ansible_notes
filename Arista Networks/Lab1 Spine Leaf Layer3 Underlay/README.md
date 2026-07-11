@@ -32,7 +32,7 @@ The below code snippet reveals the structure of this Lab 1. The command `tree -L
  ├── playbook_config_banner_login.yml
  ├── playbook_display_name.yml
  ```
-## Running the playbooks
+## Playbooks
 **Playbook 1:** `playbook_display_name.yml`
 - Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`. The below code snippets shows the results after running the `playbook_display_name.yml` playbook:
   ```
