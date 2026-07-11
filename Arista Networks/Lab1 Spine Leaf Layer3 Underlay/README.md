@@ -34,68 +34,92 @@ The below code snippet reveals the structure of this Lab 1. The command `tree -L
  ```
 ## Running the playbooks
 **Playbook 1:** `playbook_display_name.yml`
+- Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`. The below code snippets shows the results after running the `playbook_display_name.yml` playbook:
+  ```
+  ansible-arista$ ansible-playbook playbook_display_name.yml
+  
+  PLAY [Display configurations on Arista nodes] ******************************************************************************
+  
+  TASK [Display name values declared in YAML-format inventory file (`host_inventory.yml`) by using ansible default variable 'inventory_hostname'] ***
+  ok: [spine1] => {
+      "msg": "“Hostname is spine1”"
+  }
+  ok: [leaf2] => {
+      "msg": "“Hostname is leaf2”"
+  }
+  ok: [leaf3] => {
+      "msg": "“Hostname is leaf3”"
+  }
+  ok: [leaf1] => {
+      "msg": "“Hostname is leaf1”"
+  }
+  ok: [spine2] => {
+      "msg": "“Hostname is spine2”"
+  }
+  ok: [leaf4] => {
+      "msg": "“Hostname is leaf4”"
+  }
+  
+  PLAY RECAP *****************************************************************************************************************
+  leaf1                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+  leaf2                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+  leaf3                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+  leaf4                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+  spine1                     : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+  spine2                     : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+  
+  ansible-arista$
+  ```
+- As this playbook is to display the configurations on target nodes, no changes were made on target nodes, thus `changed=0` is shown in the `PLAY RECAP` section.
 
-The below code snippets shows the results after running the `playbook_display_name.yml` playbook:
-```
-ansible-arista$ ansible-playbook playbook_display_name.yml
-
-PLAY [Display configurations on Arista nodes] ******************************************************************************
-
-TASK [Display name values declared in YAML-format inventory file (`host_inventory.yml`) by using ansible default variable 'inventory_hostname'] ***
-ok: [spine1] => {
-    "msg": "“Hostname is spine1”"
-}
-ok: [leaf2] => {
-    "msg": "“Hostname is leaf2”"
-}
-ok: [leaf3] => {
-    "msg": "“Hostname is leaf3”"
-}
-ok: [leaf1] => {
-    "msg": "“Hostname is leaf1”"
-}
-ok: [spine2] => {
-    "msg": "“Hostname is spine2”"
-}
-ok: [leaf4] => {
-    "msg": "“Hostname is leaf4”"
-}
-
-PLAY RECAP *****************************************************************************************************************
-leaf1                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-leaf2                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-leaf3                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-leaf4                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-spine1                     : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-spine2                     : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-
-ansible-arista$
-```
 **Playbook 2:** `playbook_config_banner_login.yml`
 
-The below code snippets shows the results after running the `playbook_config_banner_login.yml` playbook:
+- Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`. The below code snippets shows the results after running the `playbook_config_banner_login.yml` playbook:
 
-```
-ansible-arista$ ansible-playbook playbook_config_banner_login.yml
-
-PLAY [Apply configurations on Arista nodes] ********************************************************************************
-
-TASK [Configure `banner login`] ********************************************************************************************
-changed: [leaf1]
-changed: [spine1]
-changed: [leaf3]
-changed: [spine2]
-changed: [leaf2]
-changed: [leaf4]
-
-PLAY RECAP *****************************************************************************************************************
-leaf1                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-leaf2                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-leaf3                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-leaf4                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-spine1                     : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-spine2                     : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-
-ansible-arista$
-```
-
+    ```
+    ansible-arista$ ansible-playbook playbook_config_banner_login.yml
+    
+    PLAY [Apply configurations on Arista nodes] ********************************************************************************
+    
+    TASK [Configure `banner login`] ********************************************************************************************
+    changed: [leaf1]
+    changed: [spine1]
+    changed: [leaf3]
+    changed: [spine2]
+    changed: [leaf2]
+    changed: [leaf4]
+    
+    PLAY RECAP *****************************************************************************************************************
+    leaf1                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    leaf2                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    leaf3                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    leaf4                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    spine1                     : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    spine2                     : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    
+    ansible-arista$
+    ```
+- Re-run the same playbook one more time:
+    ```
+    ansible-arista$ ansible-playbook playbook_config_banner_login.yml
+    
+    PLAY [Apply configurations on Arista nodes] ********************************************************************************
+    
+    TASK [Configure `banner login`] ********************************************************************************************
+    ok: [spine1]
+    ok: [leaf1]
+    ok: [spine2]
+    ok: [leaf3]
+    ok: [leaf2]
+    ok: [leaf4]
+    
+    PLAY RECAP *****************************************************************************************************************
+    leaf1                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    leaf2                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    leaf3                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    leaf4                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    spine1                     : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    spine2                     : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    
+    ansible-arista$
+    ```
