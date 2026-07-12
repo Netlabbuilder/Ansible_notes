@@ -73,7 +73,7 @@ The command `tree -L 2` show the content of current directory and the content of
   
   ansible-arista$
   ```
-  - Because this playbook is to display the configurations on target nodes, `TASK` section shows `ok: [spine1]`, `ok: [leaf2]`, `ok: [leaf3]`, `ok: [leaf1]`, `ok: [spine2]` and `ok: [leaf4]`, which indicates no changes occurred. `PLAY RECAP` section reaffirms it by showing `changed=0`.
+  - Because this playbook is to display the configurations on target nodes, `TASK` section shows `ok: [spine1]`, `ok: [leaf2]`, `ok: [leaf3]`, `ok: [leaf1]`, `ok: [spine2]` and `ok: [leaf4]`, which indicates no changes occurred. `PLAY RECAP` section reaffirms it by showing `changed=0` on each device.
 
 **Playbook 2:** `playbook_config_banner_login.yml`
 
