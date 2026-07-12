@@ -125,7 +125,7 @@ The command `tree -L 2` show the content of current directory and the content of
     
     ansible-arista$
     ```
-- Verify the banner login texts are now present on target nodes:
+- Verify the banner login strings and lines are now present on target nodes:
   ```
   ansible-arista$ ssh admin@leaf1
   Warning: Permanently added 'leaf1' (ED25519) to the list of known hosts.
