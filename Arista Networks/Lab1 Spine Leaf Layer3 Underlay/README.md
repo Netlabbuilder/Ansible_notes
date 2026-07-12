@@ -101,7 +101,7 @@ The command `tree -L 2` show the content of current directory and the content of
     
     ansible-arista$
     ```
-- Re-run the same playbook one more time:
+- Run the same playbook one more time:
     ```
     ansible-arista$ ansible-playbook playbook_config_banner_login.yml
     
