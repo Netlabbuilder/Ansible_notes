@@ -37,6 +37,7 @@ The command `tree -L 2` show the content of current directory and the content of
 ## Playbooks
 **Playbook 1:** `playbook_display_name.yml`
 - Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`:
+  
   ```
   ansible-arista$ ansible-playbook playbook_display_name.yml
   
@@ -102,6 +103,7 @@ The command `tree -L 2` show the content of current directory and the content of
     ansible-arista$
     ```
 - Run the same playbook one more time:
+  
     ```
     ansible-arista$ ansible-playbook playbook_config_banner_login.yml
     
