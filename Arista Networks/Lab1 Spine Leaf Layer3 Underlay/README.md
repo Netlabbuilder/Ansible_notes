@@ -73,7 +73,7 @@ The command `tree -L 2` show the content of current directory and the content of
   
   ansible-arista$
   ```
-- Because this playbook is to display the configurations on target nodes, `TASK` section shows `ok: [spine1]`, `ok: [leaf2]`, `ok: [leaf3]`, `ok: [leaf1]`, `ok: [spine2]` and `ok: [leaf4]`, which indicates no changes occurred. `PLAY RECAP` section reaffirms it by showing `changed=0`.
+  - Because this playbook is to display the configurations on target nodes, `TASK` section shows `ok: [spine1]`, `ok: [leaf2]`, `ok: [leaf3]`, `ok: [leaf1]`, `ok: [spine2]` and `ok: [leaf4]`, which indicates no changes occurred. `PLAY RECAP` section reaffirms it by showing `changed=0`.
 
 **Playbook 2:** `playbook_config_banner_login.yml`
 
@@ -102,6 +102,8 @@ The command `tree -L 2` show the content of current directory and the content of
     
     ansible-arista$
     ```
+  - Before the playbook 2 executed, there were no `banner login` configurations on target nodes. The playbook 2 checked and then applied the desired banner login strings and lines.
+  - `TASK` section shows `changed: [leaf1]`, `changed: [spine1]`, `changed: [leaf3]`, `changed: [spine2]`, `changed: [leaf2]` and `changed: [leaf4]`; and `PLAY RECAP` section shows `changed=1` as there was only one change on each device.
 - Run the same playbook one more time:
   
     ```
