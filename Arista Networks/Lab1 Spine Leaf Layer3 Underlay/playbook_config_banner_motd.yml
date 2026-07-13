@@ -1,0 +1,12 @@
+---
+- name: Apply configurations on Arista nodes
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Configure `banner motd`      
+      arista.eos.eos_banner:
+        banner: motd
+        text: |
+          YOU ARE CONNECTING TO {{ inventory_hostname }} NETWORK DEVICE
+          PLEASE EXPLICITLY EXIT THE SYSTEM WHEN IT IS DONE
+        state: present
