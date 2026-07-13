@@ -36,6 +36,7 @@ The command `tree -L 2` show the content of current directory and the content of
  ```
 ## Playbooks
 **Playbook 1:** `playbook_display_name.yml`
+- This playbook is to display name values declared in YAML-format inventory file (`host_inventory.yml`) by using ansible default variable `inventory_hostname`. No changes will be made on target nodes.
 - Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`:
   
   ```
@@ -76,7 +77,7 @@ The command `tree -L 2` show the content of current directory and the content of
   - Because this playbook is to display the configurations on target nodes, `TASK` section shows `ok: [spine1]`, `ok: [leaf2]`, `ok: [leaf3]`, `ok: [leaf1]`, `ok: [spine2]` and `ok: [leaf4]`, which indicates no changes occurred. `PLAY RECAP` section reaffirms it by showing `changed=0` on each device.
 
 **Playbook 2:** `playbook_config_banner_login.yml`
-
+- This playbook is to configure `banner login` strings and lines on target nodes.
 - Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`:
 
     ```
