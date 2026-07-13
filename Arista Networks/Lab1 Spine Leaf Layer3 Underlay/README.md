@@ -20,7 +20,7 @@ Lab 1 covers the following configuration tasks which are applied on Arista nodes
   - Network segmentation:
     - Control node and managed nodes are either in the same Layer 2 network segment (without any routed devices in between) or in differrent network segments (with one or more routed devices in between).
 
-## Project Structure
+## Project Directory Structure
 The below code snippets reveal the proposed structure of this Lab 1.
 
 The command `tree -L 2` show the content of current directory and the content of its immediate sub-directories (Depth 2 or Level 2)  
