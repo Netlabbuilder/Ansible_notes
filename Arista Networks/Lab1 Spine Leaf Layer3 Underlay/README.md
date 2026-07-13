@@ -12,7 +12,7 @@ Lab 1 covers the following configuration tasks which are applied on Arista nodes
   - One control node on which ansible is installed.
 
 - **Managed nodes**
-  - Six managed nodes, also known as **target nodes**, on which the configuration changes or modifications are applied:
+  - Six managed nodes, also known as **target or remote nodes**, on which the configuration changes or modifications are applied:
     - Two spine nodes
     - Four leaf nodes
 - **Network connectivity**
