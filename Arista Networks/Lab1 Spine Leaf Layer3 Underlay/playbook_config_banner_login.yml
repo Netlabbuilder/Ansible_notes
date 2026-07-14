@@ -10,3 +10,8 @@
           WELCOME TO NETLABBUILDER.NET NETWORK INFRASTRUCTURE
           THIS SYSTEM IS RESTRICTED TO AUTHORIZED PERSONNEL ONLY
         state: present
+    
+    - name: Copy running-config startup-config when the runnning-config is changed
+      arista.eos.eos_config:
+        save_when: modified
+
