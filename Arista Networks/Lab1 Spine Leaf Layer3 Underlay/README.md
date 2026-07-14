@@ -111,8 +111,11 @@ The command `tree -L 2` show the content of current directory and the content of
     
     ansible-arista$
     ```
-  - Before the playbook 2 executed, there were no `banner login` configurations on target nodes. The playbook 2 checked and then applied the desired banner login strings and lines.
-  - `TASK` section shows `changed: [leaf1]`, `changed: [spine1]`, `changed: [leaf3]`, `changed: [spine2]`, `changed: [leaf2]` and `changed: [leaf4]`; and `PLAY RECAP` section shows `changed=1` as there was only one change on each device.
+  - Before the playbook 2 executed, there were no `banner login` configurations on target nodes. The playbook 2 checked the current configurations, applied the desired banner login strings and lines, and saved the running-config to startup-config.
+  - `TASK` sections:
+    - TASK [Configure banner login] - shows `changed: [leaf1]`, `changed: [spine1]`, `changed: [leaf3]`, `changed: [spine2]`, `changed: [leaf2]` and `changed: [leaf4]`.
+    - TASK [Copy running-config startup-config when the runnning-config is changed] - shows that the configurations are saved to startup-config on target nodes. 
+  - `PLAY RECAP` section shows `changed=1` as there was only one change on each device.
 - Run the same playbook one more time:
   
     ```
