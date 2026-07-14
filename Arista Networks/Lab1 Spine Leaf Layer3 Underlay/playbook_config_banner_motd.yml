@@ -10,3 +10,7 @@
           YOU ARE CONNECTING TO {{ inventory_hostname }} NETWORK DEVICE
           PLEASE EXPLICITLY EXIT THE SYSTEM WHEN IT IS DONE
         state: present
+
+    - name: Copy running-config startup-config when the runnning-config is changed
+      arista.eos.eos_config:
+        save_when: modified
