@@ -81,25 +81,33 @@ The command `tree -L 2` show the content of current directory and the content of
 - Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`:
 
     ```
-    ansible-arista$ ansible-playbook playbook_config_banner_login.yml
+    ansible-arista$ ansible-playbook playbook_config_banner_login.yml 
     
-    PLAY [Apply configurations on Arista nodes] ********************************************************************************
+    PLAY [Apply configurations on Arista nodes] ******************************************************************
     
-    TASK [Configure `banner login`] ********************************************************************************************
-    changed: [leaf1]
+    TASK [Configure `banner login`] ******************************************************************************
     changed: [spine1]
-    changed: [leaf3]
-    changed: [spine2]
+    changed: [leaf1]
     changed: [leaf2]
+    changed: [spine2]
+    changed: [leaf3]
     changed: [leaf4]
     
-    PLAY RECAP *****************************************************************************************************************
-    leaf1                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    leaf2                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    leaf3                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    leaf4                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    spine1                     : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    spine2                     : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    TASK [Copy running-config startup-config when the runnning-config is changed] ********************************
+    changed: [spine1]
+    changed: [leaf1]
+    changed: [spine2]
+    changed: [leaf2]
+    changed: [leaf3]
+    changed: [leaf4]
+    
+    PLAY RECAP ***************************************************************************************************
+    leaf1                      : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    leaf2                      : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    leaf3                      : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    leaf4                      : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    spine1                     : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    spine2                     : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
     
     ansible-arista$
     ```
@@ -108,25 +116,33 @@ The command `tree -L 2` show the content of current directory and the content of
 - Run the same playbook one more time:
   
     ```
-    ansible-arista$ ansible-playbook playbook_config_banner_login.yml
+    ansible-arista$ ansible-playbook playbook_config_banner_login.yml 
     
-    PLAY [Apply configurations on Arista nodes] ********************************************************************************
+    PLAY [Apply configurations on Arista nodes] ******************************************************************
     
-    TASK [Configure `banner login`] ********************************************************************************************
-    ok: [spine1]
-    ok: [leaf1]
+    TASK [Configure `banner login`] ******************************************************************************
     ok: [spine2]
-    ok: [leaf3]
+    ok: [spine1]
     ok: [leaf2]
+    ok: [leaf3]
+    ok: [leaf1]
     ok: [leaf4]
     
-    PLAY RECAP *****************************************************************************************************************
-    leaf1                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    leaf2                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    leaf3                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    leaf4                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    spine1                     : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    spine2                     : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    TASK [Copy running-config startup-config when the runnning-config is changed] ********************************
+    ok: [spine2]
+    ok: [leaf2]
+    ok: [leaf1]
+    ok: [spine1]
+    ok: [leaf3]
+    ok: [leaf4]
+    
+    PLAY RECAP ***************************************************************************************************
+    leaf1                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    leaf2                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    leaf3                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    leaf4                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    spine1                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+    spine2                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
     
     ansible-arista$
     ```
