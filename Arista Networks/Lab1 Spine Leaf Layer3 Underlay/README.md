@@ -85,7 +85,7 @@ The command `tree -L 2` show the content of current directory and the content of
     
     PLAY [Apply configurations on Arista nodes] ******************************************************************
     
-    TASK [Configure `banner login`] ******************************************************************************
+    TASK [Configure banner login] ******************************************************************************
     changed: [spine1]
     changed: [leaf1]
     changed: [leaf2]
