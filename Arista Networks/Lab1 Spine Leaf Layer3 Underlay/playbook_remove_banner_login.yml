@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: no
   tasks:
-    - name: Remove `banner login`      
+    - name: Remove banner login
       arista.eos.eos_banner:
         banner: login
         state: absent
