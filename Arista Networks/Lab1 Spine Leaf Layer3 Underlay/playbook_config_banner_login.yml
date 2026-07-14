@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: no
   tasks:
-    - name: Configure `banner login`      
+    - name: Configure banner login
       arista.eos.eos_banner:
         banner: login
         text: |
