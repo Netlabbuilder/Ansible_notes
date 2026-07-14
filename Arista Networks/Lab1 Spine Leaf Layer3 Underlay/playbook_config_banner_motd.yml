@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: no
   tasks:
-    - name: Configure `banner motd`      
+    - name: Configure banner motd
       arista.eos.eos_banner:
         banner: motd
         text: |
