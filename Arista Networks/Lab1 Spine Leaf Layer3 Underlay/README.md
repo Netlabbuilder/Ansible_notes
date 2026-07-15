@@ -32,7 +32,10 @@ The command `tree -L 2` show the content of current directory and the content of
  │   └── arista_ceos.yml
  ├── host_inventory.yml
  ├── playbook_config_banner_login.yml
+ ├── playbook_config_banner_motd.yml
  ├── playbook_display_name.yml
+ ├── playbook_remove_banner_login.yml
+ ├── playbook_remove_banner_motd.yml
  ```
 ## Playbooks
 **Playbook 1:** `playbook_display_name.yml`
