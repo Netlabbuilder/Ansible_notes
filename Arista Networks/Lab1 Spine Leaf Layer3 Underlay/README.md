@@ -36,7 +36,7 @@ The command `tree -L 2` show the content of current directory and the content of
  ```
 ## Playbooks
 **Playbook 1:** `playbook_display_name.yml`
-- This playbook is to display name values declared in YAML-format inventory file (`host_inventory.yml`) by using ansible default variable `inventory_hostname`. No changes will be made on target nodes.
+- This playbook is to display name values declared in YAML-format inventory file `host_inventory.yml` by using ansible built-in variable `inventory_hostname`. No changes will be made on target nodes.
 - Run the playbook for the first time with command `ansible-playbook playbook_config_banner_login.yml`:
   
   ```
@@ -74,7 +74,10 @@ The command `tree -L 2` show the content of current directory and the content of
   
   ansible-arista$
   ```
-  - Because this playbook is to display the configurations on target nodes, `TASK` section shows `ok: [spine1]`, `ok: [leaf2]`, `ok: [leaf3]`, `ok: [leaf1]`, `ok: [spine2]` and `ok: [leaf4]`, which indicates no changes occurred. `PLAY RECAP` section reaffirms it by showing `changed=0` on each device.
+  - **Output explanations:**
+    - Because this playbook is to display a debug message `Hostname is {{ inventory_hostname }}` for each target node, the ansible built-in variable `inventory_hostname` is then replaced by the user-defined values under `hosts` section in `host_inventory.yml` file.
+    - `TASK` section shows `ok: [spine1]`, `ok: [leaf2]`, `ok: [leaf3]`, `ok: [leaf1]`, `ok: [spine2]` and `ok: [leaf4]`, which indicates no changes occurred.
+    - `PLAY RECAP` section reaffirms it by showing `changed=0` on each device.
 
 **Playbook 2:** `playbook_config_banner_login.yml`
 - This playbook is to configure `banner login` strings and lines on target nodes.
@@ -111,11 +114,12 @@ The command `tree -L 2` show the content of current directory and the content of
     
     ansible-arista$
     ```
-  - Before the playbook 2 executed, there were no `banner login` configurations on target nodes. The playbook 2 checked the current configurations, applied the desired banner login strings and lines, and saved the running-config to startup-config.
-  - `TASK` sections:
-    - TASK [Configure banner login] - shows `changed: [leaf1]`, `changed: [spine1]`, `changed: [leaf3]`, `changed: [spine2]`, `changed: [leaf2]` and `changed: [leaf4]`.
-    - TASK [Copy running-config startup-config when the runnning-config is changed] - shows that the configurations are saved to startup-config on target nodes. 
-  - `PLAY RECAP` section shows `changed=1` as there was only one change on each device.
+    - **Output explanations:**
+      - Before the playbook 2 executed, there were no `banner login` configurations on target nodes. The playbook 2 checked the current configurations, applied the desired banner login strings and lines, and saved the running-config to startup-config.
+      - `TASK` sections:
+        - TASK [Configure banner login] - shows `changed: [leaf1]`, `changed: [spine1]`, `changed: [leaf3]`, `changed: [spine2]`, `changed: [leaf2]` and `changed: [leaf4]`.
+        - TASK [Copy running-config startup-config when the runnning-config is changed] - shows that the configurations are saved to startup-config on target nodes. 
+      - `PLAY RECAP` section shows `changed=1` as there was only one change on each device.
 - Run the same playbook one more time:
   
     ```
