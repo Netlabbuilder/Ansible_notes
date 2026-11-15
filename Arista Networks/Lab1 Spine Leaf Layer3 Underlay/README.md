@@ -179,3 +179,4 @@ The command `tree -L 2` show the content of current directory and the content of
   ansible-arista$
   ```
 **Playbook 3:** `playbook_config_banner_motd.yml`
+- This playbook is to configure `banner motd` strings and lines on target nodes.
